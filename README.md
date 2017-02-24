@@ -1,12 +1,10 @@
-#DnsCept
+# DnsCept
 
 intercept and proxy dns in very sample way
 
 ## What's This
 
-Proxy all Dns Request But Specific Domains.
-
-
+Proxy all Dns Request But Specific Domains
 
 ## Hwo to use
 
