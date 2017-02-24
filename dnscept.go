@@ -108,11 +108,10 @@ func (h *dnsHandler) ServeDNS(w dns.ResponseWriter, r *dns.Msg) {
 		}
 	}  else {
 		r.Question[0].Name = domain
-		//if you want cache, do something here
-		client := new(dns.Client)
-		client.Net = h.Proto
-		var err error
-		if msg, _, err = client.Exchange(r, h.ProxyPass + ":53"); err == nil {
+		//if need cache, do something here
+
+		client := dns.Client{Net:h.Proto}
+		if msg, _, err := client.Exchange(r, h.ProxyPass + ":53"); err == nil {
 			msg.Question[0].Name = strings.ToLower(msg.Question[0].Name)
 			for i := 0; i < len(msg.Answer); i++ {
 				msg.Answer[i].Header().Name = strings.ToLower(msg.Answer[i].Header().Name)
