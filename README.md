@@ -19,7 +19,7 @@ if request domain does not in the hosts.conf, it will be proxy by other dns serv
 ### 2. Run
 
 ```bash
-go get github.com/leenanxi/dnsgo
+go get github.com/ti/dnsgo
 sudo dnsgo -c hosts.conf -proxy 8.8.8.8 -log true
 ```
 
