@@ -1,4 +1,4 @@
-# DnsCept
+# DnsGo
 
 intercept and proxy dns in very sample way
 
